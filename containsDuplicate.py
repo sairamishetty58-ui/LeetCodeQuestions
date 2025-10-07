@@ -9,7 +9,7 @@ class Solution:
         returns a boolean if a dupliate exist
         """
         # Solution 1: Check if the length of set is matching the normal length but still creates the set and fills the values behind.
-        return len(set(nums))!=len(nums)
+        # return len(set(nums))!=len(nums) #len of string vs len of set, as set doesnt include duplicates in it
         # Solution 2: Alternate method which manually appends to the set
         result_set = set()
         for i in nums:
