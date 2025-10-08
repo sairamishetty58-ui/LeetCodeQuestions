@@ -1,6 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         """
+        PseudoCode
+        Create an dictionary, when the list is iterated through the difference is the calculated and set to the index, if the difference exists in the list, the difference index and the current index are returned
         Time Complexity: O(N): Loops through all the numbers of the list nums, N is the length of the list.
         Space Complexity: O(N): Worst case is when the first and last number add to the target, all the prior elements will be stored in the dictonary.
         Inputs:
