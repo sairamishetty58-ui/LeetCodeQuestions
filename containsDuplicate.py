@@ -6,7 +6,7 @@ class Solution:
         Inputs:
         nums: List, a list of all values which are being expected.
         Output:
-        returns a boolean if a dupliate exist
+        returns a boolean if a duplicate exist
         """
         # Solution 1: Check if the length of set is matching the normal length but still creates the set and fills the values behind.
         # return len(set(nums))!=len(nums) #len of string vs len of set, as set doesnt include duplicates in it
