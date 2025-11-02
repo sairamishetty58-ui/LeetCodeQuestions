@@ -1,0 +1,29 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        """
+        Time Complexity: O(logn), as it performs a binary search by breaking the list in two each time until base case is reached 
+        Inputs: nums: the list of all the numbers in the sorted array
+                target: value to reach of nums
+        Output: the index of the target, to know how many rotates to make
+        it is sorted, but rotated
+        should have one pivot point
+        find the index of the target to know how many rotation required
+        """
+        l, h = 0, len(nums)-1 # creating the end points works similar to binary search
+
+        while l<=h: # will check the list until one value is left over similar to binary search
+            mid = (l + h)//2 # find the mid point of the list
+            if nums[mid] == target:
+                return mid
+            if nums[l] <= nums[mid]: # if it is sorted between this points
+                if nums[l]<=target<nums[mid]: # if target is within the region
+                    h = mid - 1
+                else:
+                    l = mid +1 # look in right side as target not preset
+            else: # pivot is on left side, right is sorted
+
+                if nums[mid]<target<=nums[h]:
+                    l = mid+1
+                else:
+                    h = mid -1
+        return -1
